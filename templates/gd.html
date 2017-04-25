@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ nowuser }}
+
+<table border="1">
+
+  <tr>
+      <th>ID</th>
+      <th>工单标题</th>
+      <th>工单类型</th>
+      <th>申请人</th>
+      <th>申请时间</th>
+      <th>审核状态</th>
+      <th>审批人</th>
+      <th>审批</th>
+
+
+    {% for datas in data %}
+
+   {% if is_add %}
+  <tr>
+
+
+      <td>{{ datas.work_id }}</td>
+      <td>{{ datas.biaoti }}</td>
+      <td>{{ datas.gd_type }}</td>
+      <td>{{ datas.auth }}</td>
+      <td>{{ datas.auth_time }}</td>
+      <td>{{ datas.status }}</td>
+      <td>{{ datas.chuliren }}</td>
+      <td><a href="/get_xqydatas/{{ datas.work_id }}/">审批</a></td>
+  </tr>
+         {% else %}
+        <tr>
+
+
+      <td>{{ datas.work_id }}</td>
+      <td>{{ datas.biaoti }}</td>
+      <td>{{ datas.gd_type }}</td>
+      <td>{{ datas.auth }}</td>
+      <td>{{ datas.auth_time }}</td>
+      <td>{{ datas.status }}</td>
+      <td>{{ datas.chuliren }}</td>
+
+  </tr>
+       {% endif %}
+
+    {% endfor %}
+</table>
+
+
+<scrip src="static/js/jquery-3.2.1.min.js"></scrip>
+<script></script>
+</body>
+</html>

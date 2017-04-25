@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>欢迎{{ username }} 登录</div>
+
+<form id="formid" method="post" action="/get_data/" >
+    工单标题:<select name="bt">
+            <option value ="生产">生产</option>
+            <option value ="测试">测试</option>
+
+</select></br>
+    工单类型:<input name="lx" id="lx"></br>
+    创建人：<input name="cjr" id="cjr" placeholder="{{ username }}"></br>
+    当前处理人：<input name="clr" id="clr"></br>
+<button type="submit" >提交工单</button>
+</form>
+
+{{ uf }}
+</body>
+
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script></script>
+</html>
